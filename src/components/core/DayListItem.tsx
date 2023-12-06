@@ -9,7 +9,8 @@ export default function DayListItem({ day }: DayListItemProps) {
     return (
         <Link href={`/day${day}`} asChild>
             <Pressable style={styles.box}>
-                <Text style={styles.text}>{day}</Text>
+                <Text style={styles.title}>Projeto</Text>
+                <Text style={styles.text}>Dia {day}</Text>
             </Pressable>
         </Link>
     );
@@ -26,9 +27,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#F9EDE3',
         borderWidth: StyleSheet.hairlineWidth,
     },
-    text: {
+    title: {
+        fontSize: 50,
         color: '#9B4521',
+        fontFamily: 'AmaticBold',
+    },
+    text: {
+        marginTop: -20,
         fontSize: 70,
+        color: '#9B4521',
         fontFamily: 'AmaticBold',
     }
 });
